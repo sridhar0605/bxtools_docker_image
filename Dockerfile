@@ -32,12 +32,13 @@ RUN apt-get update && apt-get install -y libnss-sss && apt-get clean all
 
 
 #install bxtools
-RUN git config --global http.sslVerify false && \
+RUN cd /opt && git config --global http.sslVerify false && \
 	git clone --recursive https://github.com/walaj/bxtools && \
     cd bxtools && \
     ./configure && \
     make && \
-    make install
+    make install \
+    ln -s /opt/bxtools/bin/bxtools /bin/bxtools
 
 
 # Clean up
@@ -47,6 +48,7 @@ RUN cd / && \
    apt-get autoclean -y && \
    rm -rf /var/lib/apt/lists/* && \
    apt-get clean
+
 
 
 
