@@ -36,7 +36,6 @@ RUN cd /opt && git config --global http.sslVerify false && \
     make install \
     ln -s /opt/bxtools/bin/bxtools /bin/bxtools
 
-
 # Clean up
 RUN cd / && \
    rm -rf /tmp/* && \
