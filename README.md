@@ -1,6 +1,6 @@
 # bxtools_docker_image
 
-Docker file for bxtools 
+bxtools docker images
 
 
-#original developers https://github.com/walaj/bxtools
+original developers https://github.com/walaj/bxtools
