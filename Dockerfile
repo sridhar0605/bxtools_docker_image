@@ -28,7 +28,7 @@ RUN apt-get update -y && apt-get install -y --no-install-recommends \
     liblzma-dev
 
 #install bxtools
-RUN mkdir opt && cd /opt && git config --global http.sslVerify false && \
+RUN cd /opt && git config --global http.sslVerify false && \
     git clone --recursive https://github.com/walaj/bxtools && \
     cd bxtools && \
     ./configure && \
