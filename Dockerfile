@@ -33,7 +33,7 @@ RUN mkdir opt && cd /opt && git config --global http.sslVerify false && \
     cd bxtools && \
     ./configure && \
     make && \
-    make install \
+    make install && \
     ln -s /opt/bxtools/bin/bxtools /bin/bxtools
 
 # Clean up
